@@ -28,8 +28,8 @@ export default {
         sans: ['Montserrat', 'system-ui', 'sans-serif'], 
       },
      fontSize: {
-        'display-large': ['clamp(2.75rem, 5vw, 3.125rem)', { lineHeight: '1.2', fontWeight: '700' }], 
-        'title-primary': ['clamp(1.5rem, 3vw, 2rem)', { lineHeight: '1.3', fontWeight: '700' }], 
+        'display-large': ['clamp(1.625rem, 3vw, 3.125rem)', { lineHeight: '1.2', fontWeight: '700' }], 
+        'title-primary': ['clamp(1.5rem, 2vw, 2rem)', { lineHeight: '1.3', fontWeight: '700' }], 
         'body-base': ['clamp(1rem, 2vw, 1.25rem)', { lineHeight: '1.5', fontWeight: '500' }], 
         'body-small-accent': ['1rem', { lineHeight: '1.5', fontWeight: '600' }], 
         'price-tag': ['clamp(1.25rem, 2.5vw, 1.5rem)', { lineHeight: '1.5', fontWeight: '700' }], 

@@ -5,26 +5,69 @@
 @config "../../tailwind.config.js";
 
 
- @layer components {
+@layer components {
   .btn {
     @apply flex items-center justify-center flex-row py-3 px-6 sm:px-8 w-56.75 h-12.5 border-2 border-transparent text-btn-status uppercase transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-current font-sans text-[18px];
   }
-  
+
   .btn-outline-light {
-    @apply border-brown-light text-white hover:bg-tomato-light;
+    @apply border-brown-light text-white hover:bg-tomato-light hover:border-tomato-light;
   }
-  
+
   .btn-outline-dark {
-    @apply border-black text-black hover:bg-tomato-light hover:text-white;
+    @apply border-black text-black hover:bg-tomato-light hover:text-white hover:border-tomato-light;
   }
-  
+
   .btn-primary {
     @apply bg-tomato-light text-white hover:bg-tomato border-tomato-light;
+  }
+
+  .visually-hidden {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  :focus-visible {
+    outline: 3px solid #de4931 !important;
+    outline-offset: 4px;
+  }
+
+  /* Touch-friendly track */
+  .carousel-track {
+    touch-action: pan-y;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    scroll-snap-align: center;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
 @layer base {
   body {
     @apply bg-brown-light text-black font-sans antialiased min-h-screen flex flex-col;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
