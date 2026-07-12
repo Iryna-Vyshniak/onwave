@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+@import "tailwindcss";
+
+@config "../../tailwind.config.js";
+
+
+ @layer components {
+  .btn {
+    @apply flex items-center justify-center flex-row py-3 px-6 sm:px-8 w-56.75 h-12.5 border-2 border-transparent text-btn-status uppercase transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-current font-sans text-[18px];
+  }
+  
+  .btn-outline-light {
+    @apply border-brown-light text-white hover:bg-tomato-light;
+  }
+  
+  .btn-outline-dark {
+    @apply border-black text-black hover:bg-tomato-light hover:text-white;
+  }
+  
+  .btn-primary {
+    @apply bg-tomato-light text-white hover:bg-tomato border-tomato-light;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-brown-light text-black font-sans antialiased min-h-screen flex flex-col;
+  }
+}
