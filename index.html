@@ -1,27 +1,1027 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>OnWave</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>onWave - Find Your Own Style | Premium Electric Guitars</title>
+        <meta
+            name="description"
+            content="Discover our new arrivals of premium electric guitars from top brands like Hagstrom, Gibson, and Fender. Find your perfect sound with onWave."
+        />
+        <meta
+            name="theme-color"
+            content="#f5f0eb"
+        />
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <link
-      rel="stylesheet"
-      href="/src/styles/main.css"
-    >
-    <script
-      type="module"
-      src="/src/scripts/main.js"
-    ></script>
-  </head>
-  <body class="bg-brown-light text-black font-sans antialiased min-h-screen flex flex-col">
-    <div id="app"></div>
-  </body>
+        <link
+            rel="stylesheet"
+            href="/src/styles/main.css"
+        />
+        <script
+            type="module"
+            src="/src/scripts/main.js"
+        ></script>
+    </head>
+    <body class="bg-brown-light text-black font-sans antialiased min-h-screen flex flex-col">
+        <header
+            class="w-full bg-white shadow-sm z-50 sticky top-0"
+            role="banner"
+        >
+            <div class="max-w-7xl mx-auto px-2.5 md:px-3.75 lg:px-2.5 h-15 xl:h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <a
+                    href="#"
+                    aria-label="onWave Home"
+                    class="shrink-0 z-20 outline-none focus-visible:ring-2 focus-visible:ring-tomato rounded-sm"
+                >
+                    <svg
+                        class="w-25 md:w-42 xl:w-45.5"
+                        aria-hidden="true"
+                    >
+                        <use href="#icon-logo-red"></use>
+                    </svg>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav
+                    class="hidden md:flex flex-1 justify-center"
+                    aria-label="Main Navigation"
+                >
+                    <ul class="flex space-x-1">
+                        <li><a
+                                href="#"
+                                class="flex items-center justify-center gap-2.5 h-15 xl:h-20 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                                aria-current="page"
+                            >Home</a></li>
+                        <li><a
+                                href="#catalog"
+                                class="flex items-center justify-center gap-2.5 h-15 xl:h-20 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >Catalog</a></li>
+                        <li><a
+                                href="#news"
+                                class="flex items-center justify-center gap-2.5 h-15 xl:h-20 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >News</a></li>
+                        <li><a
+                                href="#contacts"
+                                class="flex items-center justify-center gap-2.5 h-15 xl:h-20 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >Contacts</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons & Mobile Menu Open Toggle -->
+                <div class="flex items-center space-x-4 z-20">
+                    <button
+                        aria-label="Search site"
+                        class="p-2 text-black hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-black outline-none rounded-full"
+                    >
+                        <svg
+                            class="w-5 h-5 md:w-6.75 md:h-6.75 xl:w-9 xl:h-9"
+                            aria-hidden="true"
+                        >
+                            <use href="#icon-search"></use>
+                        </svg>
+                    </button>
+                    <button
+                        aria-label="User Profile"
+                        class="p-2 text-black hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-black outline-none rounded-full"
+                    >
+                        <svg
+                            class="w-5 h-5 md:w-6.75 md:h-6.75 xl:w-9 xl:h-9"
+                            aria-hidden="true"
+                        >
+                            <use href="#icon-profile"></use>
+                        </svg>
+                    </button>
+
+                    <button
+                        id="mobile-menu-open-btn"
+                        aria-haspopup="dialog"
+                        aria-controls="mobile-menu"
+                        aria-label="Open main menu"
+                        class="md:hidden p-2 text-black hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-black outline-none rounded-sm"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            aria-hidden="true"
+                        >
+                            <use href="#icon-menu"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dialog -->
+            <dialog
+                id="mobile-menu"
+                class="fixed inset-0 m-0 p-0 w-full h-full max-w-none max-h-none bg-white z-50 pt-24 px-4 flex-col hidden open:flex backdrop:bg-black/50"
+            >
+                <!-- Dialog Close Button -->
+                <form
+                    method="dialog"
+                    class="absolute top-4 right-4 md:right-8"
+                >
+                    <button
+                        aria-label="Close menu"
+                        class="p-2 text-black hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-black outline-none rounded-sm"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            aria-hidden="true"
+                        >
+                            <use href="#icon-close"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <nav aria-label="Mobile Navigation">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a
+                                href="#"
+                                class="flex items-center justify-center gap-2.5 h-15 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                                aria-current="page"
+                            >Home</a></li>
+                        <li><a
+                                href="#catalog"
+                                class="flex items-center justify-center gap-2.5 h-15 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >Catalog</a></li>
+                        <li><a
+                                href="#news"
+                                class="flex items-center justify-center gap-2.5 h-15 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >News</a></li>
+                        <li><a
+                                href="#contacts"
+                                class="flex items-center justify-center gap-2.5 h-15 active:bg-tomato-light hover:bg-tomato-light text-black active:text-white hover:text-white px-3.5 py-7 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-tomato outline-none"
+                            >Contacts</a></li>
+                    </ul>
+                </nav>
+            </dialog>
+        </header>
+
+        <main
+            class="grow"
+            id="main-content"
+        >
+            <h1 class="visually-hidden">OnWave Musical Instruments Store</h1>
+            <!-- hero -->
+            <section
+                aria-label="Featured Promotions"
+                class="relative w-full h-95 lg:h-175 bg-black overflow-hidden"
+            >
+                <ul
+                    id="hero-slider"
+                    class="relative w-full h-full m-0 p-0 list-none"
+                    aria-live="polite"
+                >
+
+                    <!-- Slide 1 -->
+                    <li class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10 hero-slide">
+                        <img
+                            src="/src/assets/hero/hero.png"
+                            srcset="
+                    /src/assets/hero/hero.png    1x,
+                    /src/assets/hero/hero@2x.png 2x,
+                    /src/assets/hero/hero@3x.png 3x
+                "
+                            alt="Red guitar on scene"
+                            fetchpriority="high"
+                            class="object-cover w-full h-full opacity-60"
+                        />
+                        <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
+                            <div class="flex flex-col items-center gap-5 lg:gap-12">
+                                <h2 class="text-display-large text-white text-center">
+                                    FIND YOUR <br aria-hidden="true" />OWN STYLE
+                                </h2>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-light text-btn-status flex justify-center items-center w-fit xl:w-56.75"
+                                >VIEW MORE</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 2 -->
+                    <li
+                        class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 z-0 hero-slide"
+                        aria-hidden="true"
+                    >
+                        <img
+                            src="/src/assets/hero/hero-2.png"
+                            srcset="
+                    /src/assets/hero/hero-2.png    1x,
+                    /src/assets/hero/hero-2@2x.png 2x,
+                    /src/assets/hero/hero-2@3x.png 3x
+                "
+                            alt="Guitars"
+                            fetchpriority="high"
+                            class="object-cover w-full h-full opacity-60"
+                        />
+                        <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
+                            <div class="flex flex-col items-center gap-5 lg:gap-12">
+                                <h2 class="text-display-large text-white text-center">
+                                    DISCOVER <br aria-hidden="true" />NEW OPTIONS
+                                </h2>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-light text-btn-status flex justify-center items-center w-fit xl:w-56.75"
+                                >VIEW MORE</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 3 -->
+                    <li
+                        class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 z-0 hero-slide"
+                        aria-hidden="true"
+                    >
+                        <img
+                            src="/src/assets/hero/hero-3.jpg"
+                            srcset="
+                    /src/assets/hero/hero-3.jpg    1x,
+                    /src/assets/hero/hero-3@2x.jpg 2x,
+                    /src/assets/hero/hero-3@3x.jpg 3x
+                "
+                            alt="Guitars"
+                            fetchpriority="high"
+                            class="object-cover w-full h-full opacity-60"
+                        />
+                        <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
+                            <div class="flex flex-col items-center gap-5 lg:gap-12">
+                                <h2 class="text-display-large text-white text-center">
+                                    EXPAND YOUR <br aria-hidden="true" />HORIZONS
+                                </h2>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-light text-btn-status flex justify-center items-center w-fit xl:w-56.75"
+                                >VIEW MORE</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul
+                    class="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-3 list-none m-0 p-0"
+                    aria-label="Slide controls"
+                >
+                    <li>
+                        <button
+                            type="button"
+                            class="hero-dot-btn text-tomato hover:text-tomato-light transition-colors outline-none rounded-full p-1"
+                            aria-label="Go to slide 1"
+                            aria-current="true"
+                        >
+                            <svg
+                                class="w-3 h-3"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-dot"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            class="hero-dot-btn text-dark-dot-inactive hover:text-tomato transition-colors outline-none rounded-full p-1"
+                            aria-label="Go to slide 2"
+                            aria-current="false"
+                        >
+                            <svg
+                                class="w-3 h-3"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-dot"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            class="hero-dot-btn text-dark-dot-inactive hover:text-tomato transition-colors outline-none rounded-full p-1"
+                            aria-label="Go to slide 3"
+                            aria-current="false"
+                        >
+                            <svg
+                                class="w-3 h-3"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-dot"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- catalog -->
+            <section
+                id="catalog"
+                aria-labelledby="new-arrivals-heading"
+                class="py-16 md:py-24 overflow-hidden bg-white"
+            >
+                <div class="container mx-auto px-4 md:px-8 relative">
+                    <h2
+                        id="new-arrivals-heading"
+                        class="text-title-primary text-center uppercase mb-12"
+                    >NEW ARRIVALS</h2>
+
+                    <div
+                        class="relative group flex flex-col md:flex-row items-center justify-center gap-5"
+                        id="products-carousel"
+                    >
+                        <button
+                            class="carousel-prev hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 z-10 text-arrow-inactive cursor-pointer hover:text-tomato active:text-tomato-light transition-colors w-12 h-12 items-center justify-center outline-none bg-transparent rounded-full"
+                            aria-label="Previous products"
+                        >
+                            <svg class="w-10 h-10">
+                                <use href="#icon-prev"></use>
+                            </svg>
+                        </button>
+
+                        <ul
+                            class="carousel-track flex gap-4 overflow-x-auto pb-6"
+                            aria-roledescription="carousel"
+                            aria-live="polite"
+                        >
+
+                            <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 bg-tomato-light text-white text-[10px] uppercase font-bold px-2 py-1 z-10">IN STOCK</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-1.png"
+                                            srcset="
+                /src/assets/products/guitar-1.png 1x,
+                /src/assets/products/guitar-1@2x.png 2x,
+                /src/assets/products/guitar-1@3x.png 3x
+              "
+                                            alt="Hagstrom Alvar Limited Edition"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Hagstrom Alvar Limited Edition</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/InStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="2990.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€2.990,00</data>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 bg-tomato-light text-white text-[10px] uppercase font-bold px-2 py-1 z-10">IN STOCK</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-2.png"
+                                            srcset="
+                /src/assets/products/guitar-2.png 1x,
+                /src/assets/products/guitar-2@2x.png 2x,
+                /src/assets/products/guitar-2@3x.png 3x
+              "
+                                            alt="Hagstrom Tremar Viking Deluxe Cloudy Seas"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Hagstrom Tremar Viking Deluxe Cloudy Seas</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/InStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="1300.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€1.300,00</data>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 border border-brown-dark text-brown-dark text-[10px] uppercase font-bold px-2 py-1 z-10">SOLD</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-3.png"
+                                            srcset="
+                /src/assets/products/guitar-3.png 1x,
+                /src/assets/products/guitar-3@2x.png 2x,
+                /src/assets/products/guitar-3@3x.png 3x
+              "
+                                            alt="Gibson Les Paul Standard 60s"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Gibson Les Paul Standard 60s</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/OutOfStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="3749.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€3.749,00</data>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 bg-tomato-light text-white text-[10px] uppercase font-bold px-2 py-1 z-10">IN STOCK</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-4.png"
+                                            srcset="
+                /src/assets/products/guitar-4.png 1x,
+                /src/assets/products/guitar-4@2x.png 2x,
+                /src/assets/products/guitar-4@3x.png 3x
+              "
+                                            alt="Suhr Standard Plus"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Suhr Standard Plus Trans Blue</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/InStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="3449.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€3.449,00</data>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 bg-tomato-light text-white text-[10px] uppercase font-bold px-2 py-1 z-10">IN STOCK</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-5.png"
+                                            srcset="
+                /src/assets/products/guitar-5.png 1x,
+                /src/assets/products/guitar-5@2x.png 2x,
+                /src/assets/products/guitar-5@3x.png 3x
+              "
+                                            alt="Fender Telecaster Black Paisley"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Fender Telecaster Black Paisley</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/InStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="1499.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€1.499,00</data>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="carousel-next hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 z-10 text-arrow-inactive cursor-pointer hover:text-tomato active:text-tomato-light transition-colors w-12 h-12 items-center justify-center outline-none bg-transparent rounded-full"
+                            aria-label="Next products"
+                        >
+                            <svg class="w-10 h-10">
+                                <use href="#icon-next"></use>
+                            </svg>
+                        </button>
+                        <!-- 3 dots - only mobile -->
+                        <ul
+                            class="carousel-dots flex md:hidden justify-center gap-3 mt-4 list-none"
+                            aria-label="Пагінація товарів"
+                        >
+                            <li><button
+                                    type="button"
+                                    class="carousel-dot text-tomato transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Початок списку"
+                                    aria-current="true"
+                                ><svg class="w-3 h-3">
+                                        <use href="#icon-dot"></use>
+                                    </svg></button></li>
+                            <li><button
+                                    type="button"
+                                    class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Середина списку"
+                                    aria-current="false"
+                                ><svg class="w-3 h-3">
+                                        <use href="#icon-dot"></use>
+                                    </svg></button></li>
+                            <li><button
+                                    type="button"
+                                    class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Кінець списку"
+                                    aria-current="false"
+                                ><svg class="w-3 h-3">
+                                        <use href="#icon-dot"></use>
+                                    </svg></button></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="mt-8 md:mt-12 flex justify-center">
+                        <a
+                            href="#"
+                            class="btn btn-outline-dark w-56.75"
+                        >VIEW MORE</a>
+                    </div>
+                </div>
+            </section>
+            <!-- partners -->
+            <section
+                aria-labelledby="partners-heading"
+                class="py-12 lg:py-17.5 bg-brown-light"
+            >
+                <div class="container mx-auto px-4 md:px-8">
+                    <h2
+                        id="partners-heading"
+                        class="text-title-primary text-center uppercase mb-12"
+                    >OUR PARTNERS</h2>
+
+                    <div
+                        class="relative group"
+                        id="partners-carousel"
+                        aria-roledescription="carousel"
+                    >
+                        <button
+                            class="carousel-prev hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 z-10 text-arrow-inactive hover:text-tomato transition-colors outline-none cursor-pointer"
+                            aria-label="Previous partners"
+                            aria-controls="partners-track"
+                        >
+                            <svg
+                                class="w-8 h-8"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-prev"></use>
+                            </svg>
+                        </button>
+
+                        <ul
+                            id="partners-track"
+                            class="carousel-track flex gap-5 overflow-x-auto pb-6 opacity-70 list-none m-0 p-0"
+                            aria-live="polite"
+                        >
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Epiphone"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-epiphone"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="ESP"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-esp"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Gibson"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-gibson"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="ENGL"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-engl"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Roland"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-roland"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Fender"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-fender"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Peavey"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-peavey"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Marshall"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-marshal"></use>
+                                </svg>
+                            </li>
+                            <li
+                                class="carousel-item shrink-0 flex items-center justify-center w-30"
+                                aria-roledescription="slide"
+                                aria-label="Orange"
+                            >
+                                <svg
+                                    class="w-28.5 h-16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-orange"></use>
+                                </svg>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="carousel-next hidden md:flex absolute -right-10 top-1/2 -translate-y-1/2 z-10 text-arrow-inactive hover:text-tomato cursor-pointer transition-colors outline-none"
+                            aria-label="Next partners"
+                            aria-controls="partners-track"
+                        >
+                            <svg
+                                class="w-8 h-8"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-next"></use>
+                            </svg>
+                        </button>
+
+                        <!-- 3 dots - only for mobile -->
+                        <ul
+                            class="carousel-dots flex md:hidden justify-center gap-3 mt-4 list-none m-0 p-0"
+                            aria-label="Partners pagination"
+                        >
+                            <li>
+                                <button
+                                    type="button"
+                                    class="carousel-dot text-tomato transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Go to slide 1"
+                                    aria-current="true"
+                                >
+                                    <svg
+                                        class="w-3 h-3"
+                                        aria-hidden="true"
+                                    >
+                                        <use href="#icon-dot"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Go to slide 2"
+                                    aria-current="false"
+                                >
+                                    <svg
+                                        class="w-3 h-3"
+                                        aria-hidden="true"
+                                    >
+                                        <use href="#icon-dot"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
+                                    aria-label="Go to slide 3"
+                                    aria-current="false"
+                                >
+                                    <svg
+                                        class="w-3 h-3"
+                                        aria-hidden="true"
+                                    >
+                                        <use href="#icon-dot"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            id="contacts"
+            class="bg-brown-dark text-white pt-12 pb-6 w-full"
+            role="contentinfo"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-[auto_auto_1fr] md:gap-x-24 items-start gap-y-10 gap-x-4">
+
+                <!-- Logo: Centered full-width on mobile, auto-width on desktop -->
+                <a
+                    href="/"
+                    aria-label="onWave Home"
+                    class="col-span-2 md:col-span-1 flex justify-center md:block outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm shrink-0"
+                >
+                    <svg
+                        class="w-37.5 h-8 md:h-10"
+                        aria-hidden="true"
+                    >
+                        <use href="#icon-logo-white"></use>
+                    </svg>
+                </a>
+
+                <!-- Navigation: Left column on mobile, auto-width center-left on desktop -->
+                <nav
+                    aria-label="Footer Navigation"
+                    class="col-span-1 md:col-span-1"
+                >
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <a
+                                href="#"
+                                class="block text-tomato text-sm hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none w-max"
+                            >Home</a>
+                        </li>
+                        <li>
+                            <a
+                                href="#catalog"
+                                class="block text-sm hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none w-max"
+                            >Catalog</a>
+                        </li>
+                        <li>
+                            <a
+                                href="#news"
+                                class="block text-sm hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none w-max"
+                            >News</a>
+                        </li>
+                        <li>
+                            <a
+                                href="#contacts"
+                                class="block text-sm hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none w-max"
+                            >Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Contacts & Socials: Right column on mobile, justified far right on desktop -->
+                <div class="col-span-1 md:col-span-1 flex flex-col items-end md:items-start justify-self-end text-right md:text-left space-y-4">
+                    <h3
+                        class="text-base font-semibold"
+                        id="contact-heading"
+                    >Contact Us</h3>
+                    <ul
+                        class="flex space-x-4"
+                        aria-label="Social media links"
+                    >
+                        <li>
+                            <a
+                                href="#"
+                                aria-label="Visit our Instagram"
+                                class="block hover:text-tomato text-white transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none rounded-sm"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                aria-label="Visit our Facebook"
+                                class="block hover:text-tomato text-white transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none rounded-sm"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                aria-label="Visit our Pinterest"
+                                class="block hover:text-tomato text-white transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none rounded-sm"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-pinterest"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                aria-label="Visit our Twitter"
+                                class="block hover:text-tomato text-white transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none rounded-sm"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                aria-label="Visit our YouTube"
+                                class="block hover:text-tomato text-white transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none rounded-sm"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    aria-hidden="true"
+                                >
+                                    <use href="#icon-youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <a
+                        href="tel:08003004040"
+                        aria-label="Call us at 0800 300 4040"
+                        class="text-sm hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brown-dark focus-visible:ring-white outline-none w-max block mt-2"
+                    >0800 300 4040</a>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-16 text-center md:text-left">
+                <p class="text-[10px] text-gray-400 text-center">&copy; Copyright 2022. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
 </html>
