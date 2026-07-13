@@ -7,13 +7,25 @@
             content="width=device-width, initial-scale=1.0"
         />
         <title>onWave - Find Your Own Style | Premium Electric Guitars</title>
+        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
         <meta
             name="description"
             content="Discover our new arrivals of premium electric guitars from top brands like Hagstrom, Gibson, and Fender. Find your perfect sound with onWave."
         />
-        <meta
-            name="theme-color"
-            content="#f5f0eb"
+        <meta name="theme-color" content="#f5f0eb" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="onWave - Find Your Own Style | Premium Electric Guitars" />
+        <meta property="og:description" content="Discover our new arrivals of premium electric guitars from top brands like Hagstrom, Gibson, and Fender. Find your perfect sound with onWave." />
+        <meta property="og:locale" content="en_US" />
+
+        <link
+            rel="preload"
+            as="image"
+            href="/src/assets/hero/hero.png"
+            imagesrcset="/src/assets/hero/hero.png 1x, /src/assets/hero/hero@2x.png 2x, /src/assets/hero/hero@3x.png 3x"
         />
 
         <link
@@ -138,6 +150,7 @@
                     class="absolute top-4 right-4 md:right-8"
                 >
                     <button
+                        id="mobile-menu-close-btn"
                         aria-label="Close menu"
                         class="p-2 text-black hover:text-tomato transition-colors focus-visible:ring-2 focus-visible:ring-black outline-none rounded-sm"
                     >
@@ -201,6 +214,7 @@
                 "
                             alt="Red guitar on scene"
                             fetchpriority="high"
+                            decoding="async"
                             class="object-cover w-full h-full opacity-60"
                         />
                         <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
@@ -229,7 +243,8 @@
                     /src/assets/hero/hero-2@3x.png 3x
                 "
                             alt="Guitars"
-                            fetchpriority="high"
+                            loading="lazy"
+                            decoding="async"
                             class="object-cover w-full h-full opacity-60"
                         />
                         <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
@@ -258,7 +273,8 @@
                     /src/assets/hero/hero-3@3x.jpg 3x
                 "
                             alt="Guitars"
-                            fetchpriority="high"
+                            loading="lazy"
+                            decoding="async"
                             class="object-cover w-full h-full opacity-60"
                         />
                         <div class="absolute inset-0 flex flex-col items-center md:items-end justify-center container mx-auto px-4 md:px-8 xl:px-25">
@@ -299,7 +315,6 @@
                             type="button"
                             class="hero-dot-btn text-dark-dot-inactive hover:text-tomato transition-colors outline-none rounded-full p-1"
                             aria-label="Go to slide 2"
-                            aria-current="false"
                         >
                             <svg
                                 class="w-3 h-3"
@@ -314,7 +329,6 @@
                             type="button"
                             class="hero-dot-btn text-dark-dot-inactive hover:text-tomato transition-colors outline-none rounded-full p-1"
                             aria-label="Go to slide 3"
-                            aria-current="false"
                         >
                             <svg
                                 class="w-3 h-3"
@@ -340,7 +354,7 @@
                     >NEW ARRIVALS</h2>
 
                     <div
-                        class="relative group flex flex-col md:flex-row items-center justify-center gap-5"
+                        class="relative group"
                         id="products-carousel"
                     >
                         <button
@@ -353,8 +367,10 @@
                         </button>
 
                         <ul
-                            class="carousel-track flex gap-4 overflow-x-auto pb-6"
+                            id="products-track"
+                            class="carousel-track flex w-full min-w-0 gap-4 overflow-x-auto pb-6 list-none m-0 p-0"
                             aria-roledescription="carousel"
+                            aria-label="New arrivals products"
                             aria-live="polite"
                         >
 
@@ -612,6 +628,56 @@
                                     </div>
                                 </article>
                             </li>
+                              <li
+                                class="carousel-item md:w-56 w-75.25 shrink-0 relative h-full"
+                                aria-roledescription="slide"
+                            >
+                                <article
+                                    class="flex flex-col items-center p-6 bg-white outline outline-brown-light hover:outline-tomato transition-all h-full"
+                                    itemscope
+                                    itemtype="https://schema.org/Product"
+                                >
+                                    <span class="absolute top-4 left-4 bg-tomato-light text-white text-[10px] uppercase font-bold px-2 py-1 z-10">IN STOCK</span>
+                                    <div class="h-92.5 md:h-75 flex items-center justify-center mb-6 w-full">
+                                        <img
+                                            itemprop="image"
+                                            src="/src/assets/products/guitar-2.png"
+                                            srcset="
+                /src/assets/products/guitar-2.png 1x,
+                /src/assets/products/guitar-2@2x.png 2x,
+                /src/assets/products/guitar-2@3x.png 3x
+              "
+                                            alt="Hagstrom Viking Deluxe Nordic Blue"
+                                            loading="lazy"
+                                            class="max-h-full object-contain pointer-events-none"
+                                        >
+                                    </div>
+                                    <h3
+                                        itemprop="name"
+                                        class="text-center text-sm font-semibold mb-2 h-10 line-clamp-2"
+                                    >Hagstrom Viking Deluxe Nordic Blue</h3>
+                                    <div
+                                        itemprop="offers"
+                                        itemscope
+                                        itemtype="https://schema.org/Offer"
+                                        class="mt-auto flex flex-col items-center w-full"
+                                    >
+                                        <meta
+                                            itemprop="priceCurrency"
+                                            content="EUR"
+                                        />
+                                        <link
+                                            itemprop="availability"
+                                            href="https://schema.org/InStock"
+                                        />
+                                        <data
+                                            itemprop="price"
+                                            value="1700.00"
+                                            class="text-price-tag mb-4 block"
+                                        >€1.700,00</data>
+                                    </div>
+                                </article>
+                            </li>
                         </ul>
 
                         <button
@@ -625,12 +691,12 @@
                         <!-- 3 dots - only mobile -->
                         <ul
                             class="carousel-dots flex md:hidden justify-center gap-3 mt-4 list-none"
-                            aria-label="Пагінація товарів"
+                            aria-label="Pagination of guitars"
                         >
                             <li><button
                                     type="button"
                                     class="carousel-dot text-tomato transition-colors outline-none rounded-full p-1 cursor-pointer"
-                                    aria-label="Початок списку"
+                                    aria-label="Go to start of list"
                                     aria-current="true"
                                 ><svg class="w-3 h-3">
                                         <use href="#icon-dot"></use>
@@ -638,16 +704,14 @@
                             <li><button
                                     type="button"
                                     class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
-                                    aria-label="Середина списку"
-                                    aria-current="false"
+                                    aria-label="Go to middle of list"
                                 ><svg class="w-3 h-3">
                                         <use href="#icon-dot"></use>
                                     </svg></button></li>
                             <li><button
                                     type="button"
                                     class="carousel-dot text-dark-dot-inactive transition-colors outline-none rounded-full p-1 cursor-pointer"
-                                    aria-label="Кінець списку"
-                                    aria-current="false"
+                                    aria-label="Go to end of list"
                                 ><svg class="w-3 h-3">
                                         <use href="#icon-dot"></use>
                                     </svg></button></li>
@@ -694,7 +758,7 @@
 
                         <ul
                             id="partners-track"
-                            class="carousel-track flex gap-5 overflow-x-auto pb-6 opacity-70 list-none m-0 p-0"
+                            class="carousel-track flex gap-5 overflow-x-auto pb-6 opacity-70 list-none m-0 p-0 w-full"
                             aria-live="polite"
                         >
                             <li
@@ -882,8 +946,6 @@
             role="contentinfo"
         >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-[auto_auto_1fr] md:gap-x-24 items-start gap-y-10 gap-x-4">
-
-                <!-- Logo: Centered full-width on mobile, auto-width on desktop -->
                 <a
                     href="/"
                     aria-label="onWave Home"
@@ -897,7 +959,6 @@
                     </svg>
                 </a>
 
-                <!-- Navigation: Left column on mobile, auto-width center-left on desktop -->
                 <nav
                     aria-label="Footer Navigation"
                     class="col-span-1 md:col-span-1"
@@ -930,7 +991,6 @@
                     </ul>
                 </nav>
 
-                <!-- Contacts & Socials: Right column on mobile, justified far right on desktop -->
                 <div class="col-span-1 md:col-span-1 flex flex-col items-end md:items-start justify-self-end text-right md:text-left space-y-4">
                     <h3
                         class="text-base font-semibold"
@@ -1020,7 +1080,7 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-16 text-center md:text-left">
-                <p class="text-[10px] text-gray-400 text-center">&copy; Copyright 2022. All rights reserved.</p>
+                <p class="text-[10px] text-gray-400 text-center">&copy; Copyright <span id="copyright-year">2026</span>. All rights reserved.</p>
             </div>
         </footer>
     </body>

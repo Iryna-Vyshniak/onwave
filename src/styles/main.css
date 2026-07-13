@@ -32,9 +32,7 @@
     outline-offset: 4px;
   }
 
-  /* Touch-friendly track */
   .carousel-track {
-    touch-action: pan-y;
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-snap-type: x mandatory;
